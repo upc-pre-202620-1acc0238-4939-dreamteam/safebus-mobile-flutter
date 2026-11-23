@@ -17,8 +17,8 @@ class DriverEmergencySentScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 PriorityChip(priority: EmergencyPriority.critical),
                 SizedBox(width: 8),
                 _StatusChip(status: EmergencyStatus.active),
@@ -31,6 +31,26 @@ class DriverEmergencySentScreen extends StatelessWidget {
               'Tu empresa fue notificada. El caso quedó registrado con '
               'prioridad Critical.',
               style: theme.textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 12),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: theme.colorScheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.info_outline_rounded, size: 18),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Referencia: EMG-001 (caso simulado)',
+                    style: theme.textTheme.bodySmall?.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 24),
             OutlinedButton.icon(
