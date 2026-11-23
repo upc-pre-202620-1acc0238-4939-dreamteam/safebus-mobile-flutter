@@ -16,6 +16,10 @@ class Shift {
   final String schedule;
   final bool validated;
 
+  bool get isPendingValidation => !validated;
+  String get statusText => validated ? 'Turno validado' : 'Turno activo';
+  String get routeSummary => '$origin → $destination';
+
   Shift copyWith({bool? validated}) {
     return Shift(
       unit: unit,
