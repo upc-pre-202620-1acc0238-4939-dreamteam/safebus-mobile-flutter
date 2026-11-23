@@ -48,13 +48,34 @@ flutter run
 lib/
 ├── main.dart                  # Entry point + MaterialApp
 ├── theme/                     # Paleta y tema (Material 3 + Inter)
-├── models/                    # Shift, Emergency (prioridad/estado)
+├── models/                    # Shift, Emergency, EmergencyIncident
 ├── widgets/                   # Logo, chip de prioridad, cuerpo "pendiente"
 └── features/
     ├── role_selection/        # Selección de rol
     ├── driver/                # Rol Conductor (implementado)
     ├── passenger/             # Rol Pasajero (pendiente)
     └── supervisor/            # Rol Supervisor (pendiente)
+```
+
+## Pruebas y Calidad
+
+Para ejecutar la suite de pruebas automatizadas (unitarias y de widgets):
+
+```bash
+flutter test
+```
+
+Para ejecutar el análisis estático del código Dart:
+
+```bash
+dart analyze
+```
+
+```
+test/
+├── models/                    # Pruebas unitarias de modelos (Shift, Emergency)
+├── features/driver/           # Pruebas de widgets de DriverShiftScreen
+└── widget_test.dart           # Prueba de widget de selección de rol
 ```
 
 ---

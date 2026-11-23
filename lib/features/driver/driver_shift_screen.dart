@@ -86,6 +86,33 @@ class _DriverShiftScreenState extends State<DriverShiftScreen> {
                 style: OutlinedButton.styleFrom(
                   minimumSize: const Size.fromHeight(52),
                 ),
+              )
+            else
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: AppColors.secondary.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: AppColors.secondary.withValues(alpha: 0.3),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.check_circle_rounded,
+                        color: AppColors.secondary),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        'Unidad validada. Listo para iniciar recorrido.',
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          color: AppColors.secondary,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             const Spacer(),
             FilledButton.icon(
