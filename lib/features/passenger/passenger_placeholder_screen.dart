@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../../theme/app_colors.dart';
 import '../../widgets/role_pending_body.dart';
 
 /// Rol Pasajero — fuera del alcance del 30% entregado (pendiente, 70% restante).
@@ -12,6 +12,8 @@ class PassengerPlaceholderScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Pasajero')),
       body: const RolePendingBody(
         role: 'Pasajero',
+        icon: Icons.person_rounded,
+        color: AppColors.primary,
         items: [
           'Registro con DNI',
           'Mi viaje (verificación por QR)',
